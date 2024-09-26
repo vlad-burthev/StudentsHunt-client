@@ -1,0 +1,14 @@
+.info {
+  color: $sblack;
+  & > h3 {
+    font-size: 32px;
+    line-height: $line-height;
+    font-weight: $fw-b;
+
+    margin: 35px 0 26px;
+  }
+
+  & > p {
+    font-size: $fs-xl;
+  }
+}

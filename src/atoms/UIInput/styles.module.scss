@@ -1,0 +1,48 @@
+.input-block {
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  font-size: $fs-l;
+  font-weight: $fw-m;
+  line-height: $input-line-height;
+  margin-bottom: 12px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  font-size: $fs-m;
+  line-height: $input-line-height;
+  color: $gray-dark;
+
+  background-color: $lgray;
+
+  padding: 16px 48px;
+
+  border-radius: 12px;
+
+  &:focus {
+    outline: 2px solid $blue-light;
+  }
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: auto;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0;
+  padding: 12px;
+}

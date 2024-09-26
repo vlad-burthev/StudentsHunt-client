@@ -1,0 +1,18 @@
+.button {
+  padding: 14px 0;
+  font-size: $fs-l;
+  font-weight: $fw-b;
+  line-height: $line-height;
+  color: $white;
+  border-radius: 12px;
+
+  transition: 0.2s all;
+
+  &.success {
+    background-color: $green;
+
+    &:hover {
+      background-color: $green-dark;
+    }
+  }
+}

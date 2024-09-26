@@ -1,0 +1,10 @@
+.auth-toggle {
+  & > span {
+    color: $gray-dark;
+  }
+
+  & > a {
+    color: $blue-dark;
+    margin-left: 5px;
+  }
+}

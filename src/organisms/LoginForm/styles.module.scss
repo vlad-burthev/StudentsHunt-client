@@ -1,0 +1,23 @@
+.from {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 135px;
+
+  background-color: $white;
+
+  padding: 124px 60px 0 60px;
+  border-radius: 8px;
+}
+
+.input-block {
+  margin-bottom: 25px;
+}
+
+.submit-btn {
+  margin-top: 52px;
+  padding: 20px 0 !important;
+  margin-bottom: 24px;
+}
