@@ -1,0 +1,7 @@
+.template {
+  position: relative;
+
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 1fr 1.5fr;
+}

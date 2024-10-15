@@ -1,0 +1,30 @@
+.item {
+  transition: 0.2s;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $green;
+
+    & .item-link {
+      color: $white;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+.item-link {
+  display: flex;
+  padding: 12px 10px 12px 20px;
+  gap: 12px;
+  align-items: center;
+  color: $gray-dark;
+  transition: 0.2s;
+
+  & > span > svg {
+    width: 24px;
+    height: 24px;
+
+    transition: 0.2s;
+  }
+}

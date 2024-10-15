@@ -1,0 +1,21 @@
+.wrapper {
+  display: grid;
+  grid-template-areas: "aside content .";
+
+  grid-template-columns: minmax(auto, max-content) minmax(320px, 1120px) auto;
+  grid-template-rows: 1fr;
+
+  column-gap: 24px;
+
+  height: 100vh;
+}
+
+.content {
+  grid-area: "content";
+
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-rows: auto 1fr;
+}

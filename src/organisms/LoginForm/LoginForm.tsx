@@ -1,6 +1,6 @@
 //components
 import UIButton from "@/atoms/UIButton/UIButton";
-import UIInput from "@/atoms/UIInput/UIInput";
+import { UIInput } from "@/atoms/UIInput/UIInput";
 import AuthFormTitle from "@/molecules/AuthFormTitle/AuthFormTitle";
 import AuthToggle from "@/molecules/AuthToggle/AuthToggle";
 
@@ -10,31 +10,48 @@ import styles from "./styles.module.scss";
 //icons
 import MailIcon from "@/assets/icons/mail.svg?react";
 import LockIcon from "@/assets/icons/lock.svg?react";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { routers } from "@/Routes/routes";
+import { routes } from "@/routes/routes";
+import { useLocation } from "react-router-dom";
+import { useLoginMutation } from "@/api/userApi/userApi";
 
 interface LoginFormProps {}
 
 const LoginForm: React.FC<LoginFormProps> = () => {
+  const { pathname } = useLocation();
+  const endpoint = pathname.split("/").pop();
+  const [login, { data, error, isError, isSuccess, isLoading }] =
+    useLoginMutation();
+
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data: any) => console.log(data);
+
+  const onSubmit = async (data: any) => {
+    console.log("go");
+    await login({ authData: data, endpoint });
+  };
+
+  console.log(data, error, isError, isSuccess, isLoading);
 
   return (
     <form className={styles.from} onSubmit={handleSubmit(onSubmit)}>
       <AuthFormTitle />
 
       <UIInput
+        type="email"
         blockStyle={styles["input-block"]}
-        label="Email Address"
+        label="Корпоративна пошта"
+        placeholder="example@studnetshunt.com"
         svgIcon={<MailIcon />}
-        {...register("firstName", { required: true, maxLength: 20 })}
+        {...register("email")}
       />
       <UIInput
+        type="password"
         isPassword={true}
-        label="Password"
+        label="Пароль"
+        placeholder="більше 6 символів"
         svgIcon={<LockIcon />}
         blockStyle={styles["input-block"]}
+        {...register("password")}
       />
 
       <UIButton
@@ -42,13 +59,13 @@ const LoginForm: React.FC<LoginFormProps> = () => {
         variant="success"
         type="submit"
       >
-        Login
+        Авторизуватись
       </UIButton>
 
       <AuthToggle
-        text="Not registered yet?"
-        link="Create an account"
-        path={routers.home}
+        text="Ще не зареєстровані?"
+        link="Створіть акаунт"
+        path={routes.reg + "/" + pathname.split("/")[2]}
       />
     </form>
   );

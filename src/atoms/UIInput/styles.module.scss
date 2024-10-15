@@ -13,6 +13,7 @@
 .input-wrapper {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .input {
@@ -38,6 +39,8 @@
 .input-icon {
   position: absolute;
   left: 12px;
+  width: 24px;
+  height: 24px;
   top: auto;
 }
 
@@ -45,4 +48,42 @@
   position: absolute;
   right: 0;
   padding: 12px;
+}
+
+///
+///
+///
+///
+///
+///
+
+.fileInputContainer {
+  display: inline-block;
+  position: relative;
+}
+
+.customLabel {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $blue-dark;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.fileName {
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+  color: $gray;
+}
+
+.file-input__label {
+  display: block;
+  margin-bottom: 12px;
 }

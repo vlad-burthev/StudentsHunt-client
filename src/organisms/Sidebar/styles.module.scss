@@ -1,0 +1,17 @@
+.aside {
+  grid-area: aside;
+  height: 100%;
+  background-color: $white;
+
+  border-right: 2px solid $lgray-dark;
+}
+
+.container {
+  position: sticky;
+  padding: 38px 16px 200px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}

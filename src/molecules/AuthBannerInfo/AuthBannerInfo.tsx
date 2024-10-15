@@ -9,9 +9,11 @@ const AuthBannerInfo: React.FC<AuthBannerInfoProps> = () => {
   return (
     <div className={styles["info"]}>
       <LogoIcon />
-      <h3>Your career is guaranteed on our platform job provider</h3>
+
+      <h3>Ваша кар'єра гарантована на нашій платформі</h3>
       <p>
-        Let’s start your new career with us by using the services we provide.
+        Розпочніть свою нову кар'єру з нами, скориставшись послугами, які ми
+        надаємо.
       </p>
     </div>
   );

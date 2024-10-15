@@ -1,4 +1,8 @@
 body {
   line-height: $line-height;
   font-family: $font-family;
+
+  height: 100vh;
+
+  background: linear-gradient(to bottom, #deebdd, #f8f5ef);
 }

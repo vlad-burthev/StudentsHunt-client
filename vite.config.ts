@@ -19,14 +19,13 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: (content: any, filePath: any) => {
-          // Добавляем глобальные импорты только если это не файлы normalize или reset
           if (
-            !filePath.includes("_normalize.scss") &&
-            !filePath.includes("_reset.scss")
+            !filePath.includes("normalize.scss") &&
+            !filePath.includes("reset.scss")
           ) {
             return `@use "src/assets/styles/variable" as *;\n${content}`;
           }
-          return content; // Не добавляем импорт
+          return content;
         },
       },
     },

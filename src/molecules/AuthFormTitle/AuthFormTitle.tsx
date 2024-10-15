@@ -6,9 +6,10 @@ interface AuthFormTitleProps {}
 const AuthFormTitle: React.FC<AuthFormTitleProps> = () => {
   return (
     <div className={styles["title-block"]}>
-      <h2 className={styles.title}>Hi There, Welcome!</h2>
+      <h2 className={styles.title}>Ласкаво просимо!</h2>
       <p className={styles.subtitle}>
-        By sign in or sign up with your account, you can get all features here.
+        Увійшовши або зареєструвавшись у своєму обліковому записі, ви отримаєте
+        доступ до всіх функції
       </p>
     </div>
   );
